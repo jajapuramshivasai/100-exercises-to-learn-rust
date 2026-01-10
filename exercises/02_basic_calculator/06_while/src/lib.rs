@@ -1,10 +1,19 @@
+use std::result;
+
 // Rewrite the factorial function using a `while` loop.
 pub fn factorial(n: u32) -> u32 {
     // The `todo!()` macro is a placeholder that the compiler
     // interprets as "I'll get back to this later", thus
     // suppressing type errors.
     // It panics at runtime.
-    todo!()
+    // todo!()
+    let mut itera:u32 = 1;
+    let mut resul:u32 = 1;
+    while itera <= n {
+        resul = resul * itera;
+        itera = itera + 1;
+    }
+    resul
 }
 
 #[cfg(test)]
